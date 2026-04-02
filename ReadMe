@@ -1,0 +1,39 @@
+# 🚀 Text Chat Engine (Backend)
+
+A professional-grade, real-time messaging server built with **Node.js v24**. This backend serves as the core infrastructure for a high-performance chat application, featuring bi-directional communication, secure authentication, and persistent data storage.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Runtime:** Node.js v24 (ES Modules)
+- **Framework:** Express.js
+- **Real-time:** Socket.io (Room-based architecture)
+- **Database:** MongoDB & Mongoose
+- **Security:** JWT (JSON Web Tokens) & Bcrypt password hashing
+- **Environment:** Dotenv for secure configuration
+
+---
+
+## ✨ Key Features
+
+- **Real-time Messaging:** Low-latency text exchange using WebSockets.
+- **Private Rooms:** Chat IDs generated for secure 1-on-1 conversations.
+- **JWT Authentication:** Protected routes using custom middleware.
+- **User Status:** Real-time online/offline status tracking.
+- **Typing Indicators:** Visual feedback for active conversations.
+- **Scalable Architecture:** Clean MVC (Model-View-Controller) structure.
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── config/         # Database & Environment configs
+├── controllers/    # Business & Auth Logic
+├── middleware/     # Security (JWT) & Error handling
+├── models/         # MongoDB Database Schemas
+├── routes/         # API Endpoints
+├── sockets/        # Real-time Socket.io logic
+└── server.js       # Main Entry Point
