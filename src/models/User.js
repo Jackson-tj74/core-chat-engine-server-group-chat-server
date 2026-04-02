@@ -24,8 +24,8 @@ const userSchema = new mongoose.Schema(
     },
     role: { 
       type: String, 
-      enum: [ "user"], 
-      default: "user" 
+      enum: [ "client"], 
+      default: "client" 
     },
     isOnline: { 
       type: Boolean, 

@@ -10,6 +10,6 @@ router.post("/signup", registerUser);
 
 
 router.post("/login", loginUser);
-router.get("/users",protect('user'), getAllUsers);
+router.get("/users",protect('client'), getAllUsers);
 
 export default router;
