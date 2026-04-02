@@ -24,7 +24,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173", 
+  origin: process.env.FRONTEND_URL || "http://localhost:5175", 
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -46,14 +46,14 @@ const server = http.createServer(app);
 const io = new Server(server, {
   pingTimeout: 60000, 
   cors: {
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: process.env.FRONTEND_URL || "http://localhost:5175",
   },
 });
 
 
-chatSocket(io);
+chatSocket(io)
 
-const PORT =process.env.PORT
+const PORT =process.env.PORT;
 
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
