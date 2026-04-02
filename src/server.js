@@ -52,12 +52,9 @@ const io = new Server(server, {
 
 
 chatSocket(io);
-
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT 
 server.listen(PORT, () => {
   console.log(`
-  🚀 Server is flying on port ${PORT}
-  🛠️  Mode: ${process.env.NODE_ENV || 'development'}
-  📂 API: http://localhost:${PORT}/api
-  `);
+  🚀 Server is flying on port ${PORT}`)
+  
 });
