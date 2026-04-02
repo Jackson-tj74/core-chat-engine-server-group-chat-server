@@ -5,9 +5,9 @@ import { protect } from "../middleware/middleware.js";
 
 const router = express.Router();
 
-router.post("/", protect('clients'), sendMessage);
+router.post("/", protect('user'), sendMessage);
 
 
-router.get("/:chatId", protect('clients'), getMessages);
+router.get("/:chatId", protect('user'), getMessages);
 
 export default router;

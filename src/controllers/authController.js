@@ -60,3 +60,15 @@ export const loginUser = async (req, res) => {
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "30d" });
 };
+
+export const getAllUsers = async (req, res) => {
+  try {
+    console.log("User fetching request from:", req.user._id); // Check if middleware works
+    const users = await User.find({ _id: { $ne: req.user._id } }).select("-password");
+    console.log("Users found:", users.length);
+    res.status(200).json(users);
+  } catch (error) {
+    console.error("DETAILED BACKEND ERROR:", error.message); // THIS WILL SHOW IN YOUR TERMINAL
+    res.status(500).json({ message: error.message });
+  }
+};

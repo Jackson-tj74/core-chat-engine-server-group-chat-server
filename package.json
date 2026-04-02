@@ -1,5 +1,5 @@
 {
-  "name": "whiteboard-server",
+  "name": "group-chat-server",
   "version": "1.0.0",
   "description": "Collaborative Whiteboard Backend",
   "type": "module",
