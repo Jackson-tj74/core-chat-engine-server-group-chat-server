@@ -52,13 +52,9 @@ const io = new Server(server, {
 
 
 chatSocket(io);
-const PORT = process.env.PORT || 9000;
+
+const PORT =process.env.PORT
 
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-}).on('error', (err) => {
-  if (err.code === 'EADDRINUSE') {
-    console.log('Port is busy, trying another...');
-    server.listen(PORT + 1);
-  }
-});
+})
