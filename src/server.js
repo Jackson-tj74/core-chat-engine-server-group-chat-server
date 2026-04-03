@@ -24,7 +24,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5175", 
+  origin: process.env.FRONTEND_URL , 
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -46,7 +46,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   pingTimeout: 60000, 
   cors: {
-    origin: process.env.FRONTEND_URL || "http://localhost:5175",
+    origin: process.env.FRONTEND_URL ,
   },
 });
 

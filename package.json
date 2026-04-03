@@ -19,5 +19,16 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jackson-tj74/core-chat-engine-server-group-chat-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jackson-tj74/core-chat-engine-server-group-chat-server/issues"
+  },
+  "homepage": "https://github.com/Jackson-tj74/core-chat-engine-server-group-chat-server#readme"
 }
